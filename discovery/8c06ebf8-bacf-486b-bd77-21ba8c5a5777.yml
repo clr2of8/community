@@ -1,0 +1,26 @@
+id: 8c06ebf8-bacf-486b-bd77-21ba8c5a5777
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Identify Firewalls
+description: |
+  Firewall software can be configured in many different ways and various products ship with different defaults. This
+  procedure will determine which firewall software is being used, which can give a hacker an indication of how to
+  work around it.
+tactic: discovery
+technique:
+  id: T1518.001
+  name: Security Software Discovery
+platforms:
+  windows:
+    psh:
+      command: >
+        $NameSpace = Get-WmiObject -Namespace "root" -Class "__Namespace" |
+        Select Name | Out-String -Stream | Select-String "SecurityCenter"
+        $SecurityCenter = $NameSpace | Select-Object -First 1;
+        Get-WmiObject -Namespace "root\$SecurityCenter" -Class AntiVirusProduct
+        | Select DisplayName, InstanceGuid,
+        PathToSignedProductExe,PathToSignedReportingExe, ProductState, Timestamp
+        | Format-List;

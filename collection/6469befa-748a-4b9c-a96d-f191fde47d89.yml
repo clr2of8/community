@@ -1,0 +1,28 @@
+id: 6469befa-748a-4b9c-a96d-f191fde47d89
+metadata:
+  version: 2
+  authors:
+    - privateducky
+  tags:
+    - Crown Jewels
+name: Create new directory
+description: |
+  Creating a staging directory is often a precursor to copying files into it. Hackers will do this action in order to
+  exfiltrate important files without getting caught.
+tactic: collection
+technique:
+  id: T1074
+  name: Data Staged
+platforms:
+  darwin:
+    sh:
+      command: |
+        mkdir -p /tmp/staged && echo /tmp/staged
+  linux:
+    sh:
+      command: |
+        mkdir -p /tmp/staged && echo /tmp/staged
+  windows:
+    psh:
+      command: |
+        New-Item -Path "." -Name "staged" -ItemType "directory" -Force | foreach {$_.FullName} | Select-Object

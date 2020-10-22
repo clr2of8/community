@@ -1,0 +1,31 @@
+id: de632c2d-a729-4b77-b781-6a6b09c148ba
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Find private keys
+description: |
+  Many systems use public/private key authentication where messages are encrypted and decrypted with different keys.
+  Private keys are secret and should never leave the owner's computer, as they are tied to their identity. Stealing
+  these keys allow you to impersonate the user for any system which trusts the key.
+tactic: credential-access
+technique:
+  id: T1145
+  name: Private Keys
+platforms:
+  windows:
+    psh:
+      command: |
+        foreach($i in @(".key",".pgp",".gpg",".ppk",".p12",".pem",".pfx",".cer",".p7b",".asc",".crt")){Get-ChildItem -Path c:\ -Depth 3 -File -Recurse -ErrorAction SilentlyContinue | Where-Object {$_.name -Match "$i$"}}
+    cmd:
+      command: |
+        for %i in (\.key \.pgp \.gpg \.ppk \.p12 \.pem \.pfx \.cer \.p7b \.asc) do (dir c:\ /b /s .key | findstr /e "%i")
+  darwin:
+    sh:
+      command: |
+        for i in .key .pgp .gpg .ppk .p12 .pem .pfx .cer .p7b .asc .crt;do find /Users -maxdepth 3 -name "*${i}" 2>/dev/null;done;
+  linux:
+    sh:
+      command: |
+        for i in .key .pgp .gpg .ppk .p12 .pem .pfx .cer .p7b .asc .crt;do find /etc -maxdepth 3 -name "*${i}" 2>/dev/null;done;

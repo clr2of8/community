@@ -1,0 +1,28 @@
+id: 5a39d7ed-45c9-4a79-b581-e5fb99e24f65
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: System processes
+description: |
+  Identify which processes are running on the local computer. This procedure is helpful to get a snapshot in time of
+  what a computer is doing.
+tactic: discovery
+technique:
+  id: T1057
+  name: Process Discovery
+platforms:
+  windows:
+    psh:
+      command: Get-Process
+    cmd:
+      command: tasklist
+  darwin:
+    pwsh:
+      command: Get-Process
+    sh:
+      command: ps aux
+  linux:
+    sh:
+      command: ps aux

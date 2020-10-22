@@ -1,0 +1,24 @@
+id: 05cda6f6-2b1b-462e-bff1-845af94343f7
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Discover injectable process
+description: |
+  Some processes are open to getting injected with arbitrary code, which will put new executable instructions into an
+  already running process to disguise what it is doing. This procedure determines which processes are vulnerable to
+  this type of attack.
+tactic: discovery
+technique:
+  id: T1057
+  name: Process Discovery
+platforms:
+  windows:
+    psh:
+      command: |
+        $owners = @{};
+        gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};
+        $ps = get-process | select processname,Id,@{l="Owner";e={$owners[$_.id.tostring()]}};
+        $valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq "svchost") {$p} };
+        $valid | ConvertTo-Json;

@@ -1,0 +1,20 @@
+id: c6607391-d02c-44b5-9b13-d3492ca58599
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Discover system services
+description: |
+  A system service is usually an "always-on" process which is critical to either a specific application or the computer
+  itself. This procedure identifies which services are on a computer.
+tactic: discovery
+technique:
+  id: T1007
+  name: System Service Discovery
+platforms:
+  windows:
+    psh:
+      command: Get-Service
+    cmd:
+      command: services.msc

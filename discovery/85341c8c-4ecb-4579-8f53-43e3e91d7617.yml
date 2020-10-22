@@ -1,0 +1,22 @@
+id: 85341c8c-4ecb-4579-8f53-43e3e91d7617
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Collect ARP details
+description: |
+  ARP is a protocol used to map IP addresses to the hardware addresses. This procedure runs a scan to identify which
+  devices are reachable from this computer, which allows a hacker to avoid guesswork about what IP addresses have been
+  allocated on a network.
+tactic: discovery
+technique:
+  id: T1018
+  name: Remote System Discovery
+platforms:
+  global:
+    sh:
+      command: arp -a
+  windows:
+    cmd:
+      command: arp -a

@@ -1,0 +1,27 @@
+id: e82f39e2-56f8-4f19-8376-b007f9ac5f8a
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Password policy
+description: |
+  A computer has a password policy, which any user account must abide by in order to create or reset their password.
+  The policy is usually set by a domain controller. This procedure returns what that policy is.
+tactic: discovery
+technique:
+  id: T1201
+  name: Password Policy Discovery
+platforms:
+  darwin:
+    sh:
+      command: |
+        pwpolicy getaccountpolicies
+  linux:
+    sh:
+      command: |
+        cat /etc/pam.d/common-password
+  windows:
+    psh:
+      command: |
+        net accounts

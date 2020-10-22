@@ -1,0 +1,29 @@
+id: 43b3754c-def4-4699-a673-1d85648fda6a
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Avoid logs
+description: |
+  Every command a user runs from a terminal window is logged to a file. A hacker who is using the terminal to conduct
+  malicious activities will cover their tracks by stopping this logging before they start working.
+tactic: defense-evasion
+technique:
+  id: T1562
+  name: HISTCONTROL
+platforms:
+  darwin:
+    sh:
+      command: |
+        > $HOME/.zsh_history && unset HISTFILE
+  linux:
+    sh:
+      command: |
+        > $HOME/.bash_history && unset HISTFILE
+  windows:
+    psh:
+      command: |
+        Clear-Eventlog Security;
+        Clear-Eventlog System;
+        Clear-History;Clear;

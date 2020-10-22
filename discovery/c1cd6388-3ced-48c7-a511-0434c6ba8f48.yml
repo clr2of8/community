@@ -1,0 +1,27 @@
+id: c1cd6388-3ced-48c7-a511-0434c6ba8f48
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Find local users
+description: |
+  A computer can have multiple accounts, allowing many people to share the computer but have their own configurations
+  on the box. This procedure returns all possible accounts.
+tactic: discovery
+technique:
+  id: T1087.001
+  name: Account Discovery
+platforms:
+  darwin:
+    sh:
+      command: |
+        dscl . list /Users | grep -v '_'
+  windows:
+    psh:
+      command: |
+        Get-WmiObject -Class Win32_UserAccount
+  linux:
+    sh:
+      command: |
+        cut -d: -f1 /etc/passwd | grep -v '_' | grep -v '#'

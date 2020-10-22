@@ -1,0 +1,22 @@
+id: 5c65eec8-4839-4713-a4e1-86b2e75d1927
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Surveillance
+name: Application window discovery
+description: |
+  Extracts the names of all application windows that are currently open. This can be useful to identify what the computer
+  user is currently doing.
+tactic: discovery
+technique:
+  id: T1010
+  name: Application Window Discovery
+platforms:
+  windows:
+    psh:
+      command: |
+        $x = Get-Process | Where-Object {$_.MainWindowTitle -ne ""} | Select-Object MainWindowTitle;
+        $a = New-Object -com "Shell.Application"; $b = $a.windows() | select-object LocationName;
+        write-host ($x | Format-List | Out-String) ($b | Format-List | Out-String);

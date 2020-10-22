@@ -1,0 +1,19 @@
+id: 3aad5312-d48b-4206-9de4-39866c12e60f
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Credentials in Registry
+description: |
+  The Windows registry is a local database storing all things configuration for the computer. In this case, we are looking
+  for passwords that may be cached here.
+tactic: credential-access
+technique:
+  id: T1214
+  name: Credentials in Registry
+platforms:
+  windows:
+    psh:
+      command: |
+        reg query #{registry.hive} /f password /s;

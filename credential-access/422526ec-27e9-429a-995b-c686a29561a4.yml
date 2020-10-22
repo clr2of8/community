@@ -1,0 +1,28 @@
+id: 422526ec-27e9-429a-995b-c686a29561a4
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Dump history
+description: |
+  Each time commands are run from a terminal window, they are saved to disk so the user can re-use them easily.
+  Dumping this file can reveal every command they have run, often giving clues into the most sensitive aspects of the
+  user's work.
+tactic: credential-access
+technique:
+  id: T1552.003
+  name: Bash History
+platforms:
+  darwin:
+    sh:
+      command: cat ~/.zsh_history
+  linux:
+    sh:
+      command: cat ~/.bash_history
+  windows:
+    psh:
+      command: |
+        cmd.exe /c "net user" >> C:\Windows\temp\history.log;
+        cmd.exe /c "whoami /priv" >> C:\Windows\temp\history.log;
+        cmd.exe /c "netstat -ano" >> C:\Windows\temp\history.log;

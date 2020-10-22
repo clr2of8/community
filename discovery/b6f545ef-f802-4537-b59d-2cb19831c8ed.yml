@@ -1,0 +1,20 @@
+id: b6f545ef-f802-4537-b59d-2cb19831c8ed
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Snag broadcast IP
+description: |
+  A broadcast IP address allows information to be sent to all machines on a given subnet rather than to a specific
+  machine. Often, this address indicates where the router is on a network, which is controls all network traffic.
+  This procedure will determine which IP address is acting as the broadcast.
+tactic: discovery
+technique:
+  id: T1016
+  name: System Network Configuration Discovery
+platforms:
+  darwin:
+    sh:
+      command: |
+        ifconfig | grep broadcast

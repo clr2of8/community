@@ -1,0 +1,18 @@
+id: 7c42a30c-c8c7-44c5-80a8-862d364ac1e4
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: UAC Status
+description: |
+  User Account Control is a mandatory access control facility on Windows computers. This procedure checks whether it
+  is turned on or off.
+tactic: discovery
+technique:
+  id: T1082
+  name: System Information Discovery
+platforms:
+  windows:
+    psh:
+      command: echo $(get-uac)

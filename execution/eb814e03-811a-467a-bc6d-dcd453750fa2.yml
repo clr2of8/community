@@ -1,0 +1,24 @@
+id: eb814e03-811a-467a-bc6d-dcd453750fa2
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Install PSTools
+description: |
+  PSTools is a popular Windows toolset for doing standard sysadmin activities. It is often installed on Windows computers
+  so administrators can work easier. This procedure simply downloads and uncompresses it on disk.
+tactic: execution
+technique:
+  id: T1072
+  name: Software Deployment Tools
+platforms:
+  windows:
+    psh:
+      command: |
+        [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $True };
+        $web = (New-Object System.Net.WebClient);
+        $result = $web.DownloadFile("https://download.sysinternals.com/files/PSTools.zip", "PSTools.zip");
+        New-Item -ItemType "directory" C:\Windows\System32\PSTools -Force;
+        Add-Type -Assembly 'System.IO.Compression.FileSystem';
+        [System.IO.Compression.ZipFile]::ExtractToDirectory("PSTools.zip", "C:\Windows\System32\PSTools");

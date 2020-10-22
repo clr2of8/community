@@ -1,0 +1,24 @@
+id: 385b9f52-3b9a-4f39-b0f0-926cf7625b23
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Crown Jewels
+name: Find files on removeable media
+description: |
+  Devices, such as USB drives, often hold important documents, as they've been intentionally copied to the drive at some
+  point. This procedure determines what files are on external drives.
+tactic: collection
+technique:
+  id: T1025
+  name: Data from Removeable Media
+platforms:
+  windows:
+    psh:
+      command: |
+        gwmi win32_logicaldisk | Select -property drivetype, deviceid |
+        Foreach-Object -process {if ($_.drivetype -eq 2 -OR $_.drivetype -eq 3
+        -AND $_.deviceid -ne $env:SystemDrive) {cd $_.deviceid ; Get-ChildItem
+        -Recurse -Include *. | foreach {$_.FullName};
+        cd C:}};

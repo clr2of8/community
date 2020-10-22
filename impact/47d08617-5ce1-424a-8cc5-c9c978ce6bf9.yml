@@ -1,0 +1,35 @@
+id: 47d08617-5ce1-424a-8cc5-c9c978ce6bf9
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Ransomware
+name: Leave note
+description: |
+  Part of a ransomware attack includes leaving a note on a machine to give the user instructions on how to pay the
+  ransom. This procedure emulates this behavior by dropping a note on the computer.
+tactic: impact
+technique:
+  id: T1491
+  name: Defacement
+platforms:
+  global:
+    node:
+      command: |
+        let fs = require('fs');
+        fs.writeFile('instructions.txt', 'Please pay me to unlock all the files I encrypted.', function (err) {
+            console.log('Completed T1491 proof');
+        });
+  darwin:
+    sh:
+      command: |
+        echo "Please pay me to unlock all the files I encrypted." > instructions.txt
+  linux:
+    sh:
+      command: |
+        echo "Please pay me to unlock all the files I encrypted." > instructions.txt
+  windows:
+    psh:
+      command: |
+        Set-Content -Path 'instructions.txt' -Value 'Please pay me to unlock all the files I encrypted.'

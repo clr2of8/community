@@ -1,0 +1,17 @@
+id: 9b007f62-daa1-44bd-a57d-00c5315ec6fe
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: USB Device Discovery
+description: |
+  A USB device often contains valuable data. This procedure will determine what is plugged in to a computer.
+tactic: discovery
+technique:
+  id: T1120
+  name: Peripheral Device Discovery
+platforms:
+  darwin:
+    sh:
+      command: system_profiler SPUSBDataType

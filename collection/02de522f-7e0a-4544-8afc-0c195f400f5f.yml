@@ -1,0 +1,27 @@
+id: 02de522f-7e0a-4544-8afc-0c195f400f5f
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Parse SSH config
+description: |
+  Search the configuration file for shortcut SSH commands the user has intentionally saved. Sysadmins and developers
+  often fill this file with aliases to quickly hop into remote computers to manage them.
+tactic: collection
+technique:
+  id: T1005
+  name: Data from Local System
+platforms:
+  global:
+    python:
+      command: |
+        import sys,subprocess;
+        install=lambda pack: subprocess.check_call([sys.executable, "-m", "pip", "install", pack]);
+        install('stormssh');
+        subprocess.Popen(['storm', 'list']).communicate();
+  linux:
+    sh:
+      command: >
+        pip install -q stormssh 2>/dev/null && storm list | sed
+        's/\x1b\[[0-9;]*m//g'

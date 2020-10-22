@@ -1,0 +1,19 @@
+id: 134b49a3-3f93-41bd-85f4-563eadbb6055
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Stop PowerShell processes
+description: |
+  Active processes are the currently running applications on a computer. This procedure will kill any of them which
+  contain "powershell" in the process name.
+tactic: execution
+technique:
+  id: T1059.001
+  name: Command-Line Interface
+platforms:
+  windows:
+    pwsh:
+      command: |
+        Get-Process -Name "powershell" | Stop-Process

@@ -1,0 +1,20 @@
+id: 3864fd22-5c63-41c9-bdbc-a66b5ffa3f5e
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Bypass ExecutionPolicy
+description: |
+  Windows PowerShell is often disabled by default, not allowing users to execute untrusted commands. It gives an easy
+  way to override this behavior though through the ExecutionPolicy bypass parameter.
+tactic: defense-evasion
+technique:
+  id: T1556
+  name: Modify Authentication Process
+platforms:
+  windows:
+    psh:
+      command: |
+        Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name ExecutionPolicy -Value ByPass;
+        $shell = New-Object -ComObject Wscript.Shell Set-ExecutionPolicy Bypass | echo $shell.sendkeys("Y`r`n");

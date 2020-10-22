@@ -1,0 +1,30 @@
+id: 90c2efaa-8205-480d-8bb6-61d90dbaf81b
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Crown Jewels
+    - Ransomware
+name: Find recent files
+description: |
+  Locate files modified in the last 24 hours. Recently modified files typically mean they carry some significance and
+  a hacker can look for these versus looking at each file on a system to determine worth.
+tactic: collection
+technique:
+  id: T1005
+  name: Data from Local System
+platforms:
+  darwin:
+    sh:
+      command: |
+        find ~/Downloads ~/Desktop ~/Documents -type f -mtime -1
+  linux:
+    sh:
+      command: |
+        find ~ -mtime -1
+  windows:
+    psh:
+      command: >
+        (Get-ChildItem -Path c:\pstbak\*.* -Filter *.pst | ? {$_.LastWriteTime
+        -gt (Get-Date).AddDays(-1)}).Count

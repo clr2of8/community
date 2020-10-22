@@ -1,0 +1,26 @@
+id: 4e97e699-93d7-4040-b5a3-2e906a58199e
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Crown Jewels
+name: Stage collected files
+description: |
+  Copy files to a different directory. Hackers will often stage files instead of steal the original copies.
+tactic: collection
+technique:
+  id: T1074
+  name: Data Staged
+platforms:
+  global:
+    sh:
+      command: |
+        cp #{file.T1005} #{directory.T1074}
+  windows:
+    psh:
+      command: |
+        Copy-Item #{file.T1005} #{directory.T1074}
+    cmd:
+      command: |
+        copy #{file.T1005} #{directory.T1074}

@@ -1,0 +1,25 @@
+id: 5c4dd985-89e3-4590-9b57-71fed66ff4e2
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Permission Groups Discovery
+description: |
+  Computer users are put into groups, which control their security access on the computer. Identifying which groups
+  are assigned to the current user can show if they have administrator privileges or not.
+tactic: discovery
+technique:
+  id: T1069
+  name: Permission Groups Discovery
+platforms:
+  windows:
+    psh:
+      command: |
+        gpresult /R
+  darwin:
+    sh:
+      command: groups
+  linux:
+    sh:
+      command: groups

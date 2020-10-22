@@ -1,0 +1,27 @@
+id: 638fb6bb-ba39-4285-93d1-7e4775b033a8
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Active network connections
+description: |
+  Network connections are the persistent computer-to-computer pipelines which allow applications to talk to each other.
+  This procedure identifies which connections are active, which shows what remote computers are accessible and used.
+tactic: discovery
+technique:
+  id: T1049
+  name: System Network Connections Discovery
+platforms:
+  darwin:
+    sh:
+      command: |
+        netstat -ant
+  linux:
+    sh:
+      command: |
+        netstat -ant
+  windows:
+    psh:
+      command: |
+        Get-NetTCPConnection

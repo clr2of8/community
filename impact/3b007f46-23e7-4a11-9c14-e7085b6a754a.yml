@@ -1,0 +1,18 @@
+id: 3b007f46-23e7-4a11-9c14-e7085b6a754a
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags: []
+name: Quit application
+description: |
+  This procedure immediately halts the an installed application, force closing it
+tactic: impact
+technique:
+  id: T1489
+  name: Service Stop
+platforms:
+  darwin:
+    osa:
+      command: |
+        quit app "#{app.T1518}"

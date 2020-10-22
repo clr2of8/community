@@ -1,0 +1,20 @@
+id: 530e47c6-8592-42bf-91df-c59ffbd8541b
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Crown Jewels
+name: View admin shares
+description: |
+  Admin shares are hidden directories on networked computers. These "share drive" often contain files which sysadmins
+  rely on to make their jobs easier, such as configuration files and plain-text passwords. This procedure identifies the
+  admin shares the computer has access to.
+tactic: discovery
+technique:
+  id: T1135
+  name: Network Share Discovery
+platforms:
+  windows:
+    psh:
+      command: Get-SmbShare | ConvertTo-Json

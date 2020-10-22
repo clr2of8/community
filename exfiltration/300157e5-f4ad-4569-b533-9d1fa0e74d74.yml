@@ -1,0 +1,30 @@
+id: 300157e5-f4ad-4569-b533-9d1fa0e74d74
+metadata:
+  version: 1
+  authors:
+    - privateducky
+  tags:
+    - Crown Jewels
+name: Compress staged directory
+description: |
+  Compressing a directory has many purposes, mainly making the contents smaller and condensing them to a single file.
+  A hacker will tend to do this before attempting to steal files from a computer because it is less noticeable to
+  steal a small file than a large number of bigger files.
+tactic: exfiltration
+technique:
+  id: T1560.001
+  name: Archive Collected Data
+platforms:
+  darwin:
+    sh:
+      command: |
+        tar -P -zcf #{directory.T1074}.tar.gz #{directory.T1074} && echo #{directory.T1074}.tar.gz
+  linux:
+    sh:
+      command: |
+        tar -P -zcf #{directory.T1074}.tar.gz #{directory.T1074} && echo #{directory.T1074}.tar.gz
+  windows:
+    psh:
+      command: |
+        Compress-Archive -Path #{directory.T1074} -DestinationPath #{directory.T1074}.zip -Force;
+        sleep 1; ls #{directory.T1074}.zip | foreach {$_.FullName} | select
