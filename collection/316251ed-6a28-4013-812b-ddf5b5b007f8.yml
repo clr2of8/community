@@ -16,7 +16,7 @@ platforms:
   darwin:
     sh:
       command: >
-        for i in {1..2}; do screencapture -t png /tmp/screen-$i.png; sleep 3; done; echo /tmp/screen-*
+        for i in {1..2}; do screencapture -t png /tmp/screen-$i.png; sleep 30; done; echo /tmp/screen-*
   windows:
     psh:
       command: |
