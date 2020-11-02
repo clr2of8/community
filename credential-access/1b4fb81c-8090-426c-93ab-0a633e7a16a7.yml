@@ -17,4 +17,4 @@ platforms:
   darwin:
     sh:
       command: |
-        sudo tcpdump -i any port http or port ftp or port smtp or port imap or port pop3 or port telnet -lA | egrep -i -B5 'login=|user=|username=|password=|pass:|user:|username:|password:|login:' & sleep 20; kill $!
+        sudo tcpdump -i any port http or port ftp or port smtp or port imap or port pop3 or port telnet -lA | egrep -i -B5 'login=|user=|username=|password=|pass:|user:|username:|password:|login:' & sleep 60; kill $!
