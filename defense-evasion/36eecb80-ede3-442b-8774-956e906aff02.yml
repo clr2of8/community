@@ -6,7 +6,7 @@ metadata:
   tags: []
 name: 1-min sleep
 description: |
-  Pause the agent process for a period of time. A hacker would do this to avoid detection by making no "nose" on a
+  Pause the agent process for a period of time. A hacker would do this to avoid detection by making no "noise" on a
   computer.
 tactic: defense-evasion
 technique:
