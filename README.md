@@ -61,7 +61,7 @@ copy #{file.T1005} #{directory.T1074}
 The variables are meant to be replaced at runtime. In the Operator, this happens automatically but if you want to use
 these files manually, you will need to fill in the desired values. The more variables you use, the more dynamic your operations will be.
 
-Variables are either discoverable or reportable.
+Variables are either discoverable or automatic.
 
 ### Discoverable variables
 
@@ -81,12 +81,12 @@ a T1005 procedure:
 
 Prelude Operator parses the results from every run command, attempting to learn <i>facts</i> - which automatically fill in variables - unlocking additional procedures for execution.
 
-### Reportable variables
+### Automatic variables
 
-Reportable facts are those a Prelude agent should report, usually as part of a beacon.
+Automatic facts are environmental and are applied to an agent based on conditional logic.
 
-* agent.name: the name given to the agent
-* agent.location: the absolute file path of the agent on disk
+* agent.name: the current name given to the agent
+* agent.location: the absolute file path of the agent file on disk
 
 ## CALDERA inspired
 
