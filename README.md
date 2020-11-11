@@ -85,9 +85,9 @@ Prelude Operator parses the results from every run command, attempting to learn 
 
 Automatic facts are environmental and are applied to an agent based on conditional logic.
 
-* auto.operator.http: callback address of your HTTP server
-* auto.agent.name: current name given to the agent
-* auto.agent.location: absolute file path of the agent file on disk
+* **auto.operator.http**: callback address of your HTTP server
+* **auto.agent.name**: current name given to the agent
+* **auto.agent.location**: absolute file path of the agent file on disk
 
 ## CALDERA inspired
 
