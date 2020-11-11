@@ -85,7 +85,8 @@ Prelude Operator parses the results from every run command, attempting to learn 
 
 Reportable facts are those a Prelude agent should report, usually as part of a beacon.
 
-* agent: the absolute file path of the agent on disk
+* agent.name: the name given to the agent
+* agent.location: the absolute file path of the agent on disk
 
 ## CALDERA inspired
 
