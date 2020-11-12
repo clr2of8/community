@@ -67,10 +67,10 @@ Variables are either discoverable or automatic.
 
 Discoverable facts are those you anticipate a Prelude agent to find on its own. 
 
-* file: references the absolute file path on disk
-* directory: references the absolute path to a directory
-* ssh: an ssh connection command
-* ip: an ipv4 address
+* **file**: references the absolute file path on disk
+* **directory**: references the absolute path to a directory
+* **ssh**: an ssh connection command
+* **ip**: an ipv4 address
 
 When using discoverable variables inside commands, remember to place a dot separator with the technique ID you want the replaced
 variable (fact) to come from. For example, the following variable will be replaced with each file found by running
