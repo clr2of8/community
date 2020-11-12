@@ -85,6 +85,7 @@ Prelude Operator parses the results from every run command, attempting to learn 
 
 Automatic facts are environmental and are applied to an agent based on conditional logic.
 
+* **operator.key**: a unique key for your Operator session, resetting every restart
 * **operator.http**: callback address of your HTTP server
 * **agent.name**: current name given to the agent
 * **agent.location**: absolute file path of the agent file on disk
