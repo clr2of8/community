@@ -5,6 +5,7 @@ metadata:
     - privateducky
   tags:
     - Crown Jewels
+    - Caldera
 name: Compress staged directory
 description: |
   Compressing a directory has many purposes, mainly making the contents smaller and condensing them to a single file.

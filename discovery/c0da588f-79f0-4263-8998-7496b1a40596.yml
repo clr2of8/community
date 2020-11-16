@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: Identify active user
 description: |
   The active user is the user account which is currently using the computer.

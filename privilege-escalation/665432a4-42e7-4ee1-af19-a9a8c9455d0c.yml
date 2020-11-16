@@ -3,7 +3,8 @@ metadata:
   version: 2
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: UAC bypass registry
 description: |
   The Windows registry is a database of configuration rules for a computer. This procedure changes a value to bypass

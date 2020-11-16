@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: Identify Firewalls
 description: |
   Firewall software can be configured in many different ways and various products ship with different defaults. This

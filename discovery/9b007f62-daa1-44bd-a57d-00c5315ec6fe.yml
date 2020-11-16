@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: USB Device Discovery
 description: |
   A USB device often contains valuable data. This procedure will determine what is plugged in to a computer.

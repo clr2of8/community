@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: Find private keys
 description: |
   Many systems use public/private key authentication where messages are encrypted and decrypted with different keys.

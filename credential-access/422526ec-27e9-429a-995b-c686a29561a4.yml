@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: Dump history
 description: |
   Each time commands are run from a terminal window, they are saved to disk so the user can re-use them easily.
