@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: Credentials in Registry
 description: |
   The Windows registry is a local database storing all things configuration for the computer. In this case, we are looking

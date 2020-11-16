@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: Permission Groups Discovery
 description: |
   Computer users are put into groups, which control their security access on the computer. Identifying which groups

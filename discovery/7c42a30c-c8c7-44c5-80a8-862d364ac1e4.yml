@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: UAC Status
 description: |
   User Account Control is a mandatory access control facility on Windows computers. This procedure checks whether it

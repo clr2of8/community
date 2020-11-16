@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: PowerShell Invoke MimiKatz
 description: |
   MimiKatz is a program which dumps credentials on a Windows computer. It is usually blocked immediately when downloaded.

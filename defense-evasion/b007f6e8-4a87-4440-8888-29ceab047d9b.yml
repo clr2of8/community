@@ -3,7 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags: []
+  tags:
+    - Caldera
 name: Disable Windows Defender
 description: |
   Windows Defender is the defacto standard antivirus on Windows computers. It will block normal malicious activity on

@@ -5,6 +5,7 @@ metadata:
     - privateducky
   tags:
     - Surveillance
+    - Caldera
 name: Sniff network traffic
 description: |
   Spend 60 seconds sniffing all packets going in/out from this computer. The goal here is to learn something about

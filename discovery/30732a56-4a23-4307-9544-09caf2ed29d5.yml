@@ -5,6 +5,7 @@ metadata:
     - privateducky
   tags:
     - Ransomware
+    - Caldera
 name: Find deletable dirs
 description: |
   A computer is made up of files and directories, each owned by a user or group. This procedure will discover all
