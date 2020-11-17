@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: 1-min sleep
 description: |
   Pause the agent process for a period of time. A hacker would do this to avoid detection by making no "noise" on a

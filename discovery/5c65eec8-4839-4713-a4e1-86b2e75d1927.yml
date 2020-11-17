@@ -3,9 +3,9 @@ metadata:
   version: 1
   authors:
     - privateducky
+    - MITRE
   tags:
     - Surveillance
-    - Caldera
 name: Application window discovery
 description: |
   Extracts the names of all application windows that are currently open. This can be useful to identify what the computer

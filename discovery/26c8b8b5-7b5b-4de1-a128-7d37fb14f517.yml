@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Discover domain controller
 description: |
   A domain controller is a server in charge of authentication and configuration for a Windows computer domain. These

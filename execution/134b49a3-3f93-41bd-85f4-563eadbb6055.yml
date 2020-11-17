@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Stop PowerShell processes
 description: |
   Active processes are the currently running applications on a computer. This procedure will kill any of them which

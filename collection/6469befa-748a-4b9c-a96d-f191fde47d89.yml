@@ -3,9 +3,9 @@ metadata:
   version: 2
   authors:
     - privateducky
+    - MITRE
   tags:
     - Crown Jewels
-    - Caldera
 name: Create new directory
 description: |
   Creating a staging directory is often a precursor to copying files into it. Hackers will do this action in order to

@@ -3,8 +3,8 @@ metadata:
   version: 2
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Install PowerShell Core 6
 description: |
   PowerShell is installed by default on Windows computers. It is often abused by hackers, so it is usually heavily

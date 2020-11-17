@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Find local users
 description: |
   A computer can have multiple accounts, allowing many people to share the computer but have their own configurations
