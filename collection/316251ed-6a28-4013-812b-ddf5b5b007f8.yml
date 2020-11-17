@@ -3,8 +3,8 @@ metadata:
   version: 2
   authors:
     - privateducky
+    - MITRE
   tags:
-    - Caldera
     - Surveillance
 name: Screen Capture
 description: |

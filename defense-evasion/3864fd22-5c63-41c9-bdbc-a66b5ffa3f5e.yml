@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Bypass ExecutionPolicy
 description: |
   Windows PowerShell is often disabled by default, not allowing users to execute untrusted commands. It gives an easy

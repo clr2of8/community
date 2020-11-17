@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Dump LSASS memory
 description: |
   LSASS is a Windows process for enforcing security policies. It is stored in memory and it can be dumped to disk,

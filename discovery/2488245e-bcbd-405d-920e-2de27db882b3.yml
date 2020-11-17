@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Simple registry query
 description: |
   The Windows registry is a configuration database for a computer. It can be queried using keys. This procedure returns

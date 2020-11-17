@@ -3,9 +3,9 @@ metadata:
   version: 1
   authors:
     - privateducky
+    - MITRE
   tags:
     - Surveillance
-    - Caldera
 name: Record microphone
 description: |
   Most computers have a microphone which is always-on/active. This procedure installs recording software, then runs it

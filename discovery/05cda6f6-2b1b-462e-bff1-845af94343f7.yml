@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Discover injectable process
 description: |
   Some processes are open to getting injected with arbitrary code, which will put new executable instructions into an

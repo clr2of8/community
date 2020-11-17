@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Get system time
 description: |
   Get the current date/time of the computer to clue in on where it may be physically.

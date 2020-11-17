@@ -3,9 +3,9 @@ metadata:
   version: 1
   authors:
     - privateducky
+    - MITRE
   tags:
     - Ransomware
-    - Caldera
 name: Leave note
 description: |
   Part of a ransomware attack includes leaving a note on a machine to give the user instructions on how to pay the

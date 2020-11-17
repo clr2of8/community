@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Active network connections
 description: |
   Network connections are the persistent computer-to-computer pipelines which allow applications to talk to each other.
