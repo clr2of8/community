@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Snag broadcast IP
 description: |
   A broadcast IP address allows information to be sent to all machines on a given subnet rather than to a specific

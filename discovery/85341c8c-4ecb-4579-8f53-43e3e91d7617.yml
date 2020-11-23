@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Collect ARP details
 description: |
   ARP is a protocol used to map IP addresses to the hardware addresses. This procedure runs a scan to identify which

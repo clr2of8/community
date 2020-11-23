@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Parse SSH known_hosts
 description: |
   When a user connects to a remote computer via SSH, the remote computer's "host key" (unique identifier) is stored

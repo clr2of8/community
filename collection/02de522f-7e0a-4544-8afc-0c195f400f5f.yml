@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Parse SSH config
 description: |
   Search the configuration file for shortcut SSH commands the user has intentionally saved. Sysadmins and developers

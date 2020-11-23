@@ -3,9 +3,9 @@ metadata:
   version: 1
   authors:
     - privateducky
+    - MITRE
   tags:
     - Surveillance
-    - Caldera
 name: Copy Clipboard
 description: |
   Copy the contents for the clipboard. Individuals often copy/paste as they do normal work. A hacker can look to

@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Discover system services
 description: |
   A system service is usually an "always-on" process which is critical to either a specific application or the computer

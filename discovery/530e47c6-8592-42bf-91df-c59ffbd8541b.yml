@@ -3,9 +3,9 @@ metadata:
   version: 1
   authors:
     - privateducky
+    - MITRE
   tags:
     - Crown Jewels
-    - Caldera
 name: View admin shares
 description: |
   Admin shares are hidden directories on networked computers. These "share drive" often contain files which sysadmins

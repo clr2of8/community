@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Avoid logs
 description: |
   Every command a user runs from a terminal window is logged to a file. A hacker who is using the terminal to conduct

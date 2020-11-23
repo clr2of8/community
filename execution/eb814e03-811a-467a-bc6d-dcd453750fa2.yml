@@ -3,8 +3,8 @@ metadata:
   version: 1
   authors:
     - privateducky
-  tags:
-    - Caldera
+    - MITRE
+  tags: []
 name: Install PSTools
 description: |
   PSTools is a popular Windows toolset for doing standard sysadmin activities. It is often installed on Windows computers
