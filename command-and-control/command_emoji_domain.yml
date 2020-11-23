@@ -1,0 +1,27 @@
+id: ea713bc4-63f0-501c-9a6f-0b01d560b87d
+metadata:
+  version: 1
+  authors:
+    - savvyspoon
+  tags:
+    - Network
+name: Emoji Domain
+description: |
+  Query an emoji domain to test if content control tools block access.  These domains can be used for typo squatting.
+tactic: command-and-control
+technique:
+  id: T1041
+  name: Exfiltration Over Command and Control Channel
+platforms:
+  darwin:
+    sh:
+      command: |
+        curl xn--i-7iq.ws
+  linux:
+    sh:
+      command: |
+        curl xn--i-7iq.ws
+  windows:
+    psh:
+      command: |
+        Invoke-RestMethod -Uri http://xn--i-7iq.ws -Method GET
