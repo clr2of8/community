@@ -96,8 +96,8 @@ Automatic facts are environmental and are applied to an agent based on condition
 Custom facts are user defined facts that can be arbitrarily defined. In general, follow the outline of `<ATT&CK Tactic>.<general description>` when defining these facts.
 
 Example for defining a custom NetCat listening post:
-* **exfiltration.server.ip**: IP address of the NetCat listener
-* **exfiltration.server.port**: Port NetCat is listening on on that server
+* **exfiltration.netcat.ip**: IP address of the NetCat listener
+* **exfiltration.netcat.port**: Port NetCat is listening on on that server
 
 
 ## CALDERA inspired
