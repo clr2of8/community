@@ -3,21 +3,16 @@ metadata:
   version: 1
   authors:
     - savvyspoon
-  tags:
-    - Network
+  tags: []
 name: Emoji Domain
 description: |
-  Query an emoji domain to test if content control tools block access.  These domains can be used for typo squatting.
-tactic: command-and-control
+  Query an emoji domain to test if content control tools block access, as these domains are often used in typosquatting attacks. When used in a domain name, the browser uses “punycode” to convert the emojis into complicated strings like “xn--i-7iq.ws”, which are used to take users to the corresponding website.
+tactic: exfiltration
 technique:
   id: T1041
   name: Exfiltration Over Command and Control Channel
 platforms:
-  darwin:
-    sh:
-      command: |
-        curl xn--i-7iq.ws
-  linux:
+  global:
     sh:
       command: |
         curl xn--i-7iq.ws
