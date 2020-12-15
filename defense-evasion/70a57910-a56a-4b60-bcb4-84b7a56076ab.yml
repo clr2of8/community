@@ -1,0 +1,18 @@
+id: 70a57910-a56a-4b60-bcb4-84b7a56076ab
+name: ' Disable Microsoft Defender firewall'
+description: >-
+  This procedure will disable the Microsoft Defender Firewall for the current
+  profile.
+tactic: defense-evasion
+technique:
+  id: T1562.004
+  name: Disable or Modify System Firewall
+platforms:
+  windows:
+    cmd:
+      command: netsh advfirewall set currentprofile state off
+metadata:
+  authors:
+    - bfuzzy1
+  tags: []
+  version: 1

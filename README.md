@@ -91,6 +91,15 @@ Automatic facts are environmental and are applied to an agent based on condition
 * **agent.name**: current name given to the agent
 * **agent.location**: absolute file path of the agent file on disk
 
+### Custom variables
+
+Custom facts are user defined facts that can be arbitrarily defined. In general, follow the outline of `<ATT&CK Tactic>.<general description>` when defining these facts.
+
+Example for defining a custom NetCat listening post:
+* **exfiltration.netcat.ip**: IP address of the NetCat listener
+* **exfiltration.netcat.port**: Port NetCat is listening on on that server
+
+
 ## CALDERA inspired
 
 As former CALDERA leads, this project was originally forked and designed off of the MITRE Stockpile repository.
