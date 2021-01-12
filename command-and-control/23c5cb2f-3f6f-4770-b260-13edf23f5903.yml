@@ -1,0 +1,24 @@
+id: 23c5cb2f-3f6f-4770-b260-13edf23f5903
+metadata:
+  version: 1
+  authors:
+    - khyberspache
+  tags: []
+name: Update Pneuma configuration
+description: |
+  Pneuma is an open-source agent which accompanies the Prelude platform. This procedure sends an instruction to update the
+  agent's configuration.
+tactic: command-and-control
+technique:
+  id: T1573.001
+  name: "Encrypted Channel: Symmetric Cryptography"
+platforms:
+  windows:
+    keyword:
+      command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+  darwin:
+    keyword:
+      command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+  linux:
+    keyword:
+      command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
