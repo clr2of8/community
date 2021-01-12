@@ -15,10 +15,16 @@ technique:
 platforms:
   windows:
     keyword:
-      command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+      command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
+      variants:
+        - command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
   darwin:
     keyword:
-      command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+      command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
+      variants:
+        - command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
   linux:
     keyword:
-      command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+      command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
+      variants:
+        - command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
