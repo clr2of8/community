@@ -8,7 +8,7 @@ name: Update Pneuma configuration
 description: |
   Pneuma is an open-source agent which accompanies the Prelude platform. This procedure sends an instruction to update the
   agent's configuration.
-tactic: command-and-control
+tactic: 'command-and-control'
 technique:
   id: T1573.001
   name: "Encrypted Channel: Symmetric Cryptography"
@@ -17,14 +17,14 @@ platforms:
     keyword:
       command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
       variants:
-        - command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+        - command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
   darwin:
     keyword:
       command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
       variants:
-        - command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+        - command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
   linux:
     keyword:
       command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
       variants:
-        - command: 'config.{"Name": "Example", "Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+        - command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
