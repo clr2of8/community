@@ -3,7 +3,7 @@
 Here you will find an open-source collection of TTP files, organized by ATT&CK tactic. Each procedure describes a single action an adversary
 may attempt post-compromise of a network or system.
 
-> TTP files can be used on their own or within the Prelude Operator desktop app, where they are loaded by default on each restart. Inside Operator, you are able to import TTPs from Atomic Red Team, Caldera and other popular sources.
+> TTP files can be used on their own or within the Prelude Operator desktop app, where they are loaded by default on each restart. Inside Operator, you are able to import TTPs from Atomic Red Team, Caldera and other popular sources. [This video](https://www.youtube.com/watch?v=kY3-NBES1gk) shows how to import TTPs from external sources and [this video](https://www.youtube.com/watch?v=OWjgS8bzJf0) shows how to develop new procedures from within Operator.
 
 ## Understand the format
 
