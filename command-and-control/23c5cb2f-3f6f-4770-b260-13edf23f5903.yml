@@ -1,0 +1,35 @@
+id: 23c5cb2f-3f6f-4770-b260-13edf23f5903
+metadata:
+  version: 1
+  authors:
+    - khyberspache
+  tags: []
+name: Update agent beacon protocol
+description: |
+  Tasks agent to swap C2 protocol to a different protocol.
+tactic: 'command-and-control'
+technique:
+  id: T1573.001
+  name: "Encrypted Channel: Symmetric Cryptography"
+platforms:
+  windows:
+    keyword:
+      command: 'config.{"Contact": "udp"}'
+      variants:
+        - command: 'config.{"Contact": "tcp"}'
+        - command: 'config.{"Contact": "http"}'
+        - command: 'config.{"Contact": "grcp"}'
+  darwin:
+    keyword:
+      command: 'config.{"Contact": "udp"}'
+      variants:
+        - command: 'config.{"Contact": "tcp"}'
+        - command: 'config.{"Contact": "http"}'
+        - command: 'config.{"Contact": "grcp"}'
+  linux:
+    keyword:
+      command: 'config.{"Contact": "udp"}'
+      variants:
+        - command: 'config.{"Contact": "tcp"}'
+        - command: 'config.{"Contact": "http"}'
+        - command: 'config.{"Contact": "grcp"}'
