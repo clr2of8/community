@@ -4,10 +4,9 @@ metadata:
   authors:
     - khyberspache
   tags: []
-name: Update Pneuma configuration
+name: Update agent beacon protocol
 description: |
-  Pneuma is an open-source agent which accompanies the Prelude platform. This procedure sends an instruction to update the
-  agent's configuration.
+  Tasks agent to swap C2 protocol to a different protocol.
 tactic: 'command-and-control'
 technique:
   id: T1573.001
@@ -15,16 +14,22 @@ technique:
 platforms:
   windows:
     keyword:
-      command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
+      command: 'config.{"Contact": "udp"}'
       variants:
-        - command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+        - command: 'config.{"Contact": "tcp"}'
+        - command: 'config.{"Contact": "http"}'
+        - command: 'config.{"Contact": "grcp"}'
   darwin:
     keyword:
-      command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
+      command: 'config.{"Contact": "udp"}'
       variants:
-        - command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+        - command: 'config.{"Contact": "tcp"}'
+        - command: 'config.{"Contact": "http"}'
+        - command: 'config.{"Contact": "grcp"}'
   linux:
     keyword:
-      command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Sleep": 10}'
+      command: 'config.{"Contact": "udp"}'
       variants:
-        - command: 'config.{"Contact": "udp", "Address": "0.0.0.0:4545", "Range": "purple", "Sleep": 10}'
+        - command: 'config.{"Contact": "tcp"}'
+        - command: 'config.{"Contact": "http"}'
+        - command: 'config.{"Contact": "grcp"}'
