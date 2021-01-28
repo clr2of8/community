@@ -64,9 +64,15 @@ platforms:
   linux:
     sh:
       command: 'read -sp "Enter Password: " T1187 && echo $T1187 > T1187.txt'
+  darwin:
+    osa:
+      command: >-
+        tell app "System Preferences" to display dialog "System Preferences
+        requires your password to finish applying updates." & return & return 
+        default answer "" with icon 1 with hidden answer
 metadata:
   authors:
     - khyberspache
     - bfuzzy1
   tags: []
-  version: 2
+  version: 3
