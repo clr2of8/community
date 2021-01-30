@@ -14,22 +14,22 @@ technique:
 platforms:
   windows:
     keyword:
-      command: 'config.{"Contact": "udp"}'
+      command: 'config.{"Contact": "udp", "Address": "#{operator.udp}"}'
       variants:
-        - command: 'config.{"Contact": "tcp"}'
-        - command: 'config.{"Contact": "http"}'
-        - command: 'config.{"Contact": "grcp"}'
+        - command: 'config.{"Contact": "tcp", "Address": "#{operator.tcp}"}'
+        - command: 'config.{"Contact": "http", "Address": "#{operator.http}"}'
+        - command: 'config.{"Contact": "grpc", "Address": "#{operator.grpc}"}'
   darwin:
     keyword:
-      command: 'config.{"Contact": "udp"}'
+      command: 'config.{"Contact": "udp", "Address": "#{operator.udp}"}'
       variants:
-        - command: 'config.{"Contact": "tcp"}'
-        - command: 'config.{"Contact": "http"}'
-        - command: 'config.{"Contact": "grcp"}'
+        - command: 'config.{"Contact": "tcp", "Address": "#{operator.tcp}"}'
+        - command: 'config.{"Contact": "http", "Address": "#{operator.http}"}'
+        - command: 'config.{"Contact": "grpc", "Address": "#{operator.grpc}"}'
   linux:
     keyword:
-      command: 'config.{"Contact": "udp"}'
+      command: 'config.{"Contact": "udp", "Address": "#{operator.udp}"}'
       variants:
-        - command: 'config.{"Contact": "tcp"}'
-        - command: 'config.{"Contact": "http"}'
-        - command: 'config.{"Contact": "grcp"}'
+        - command: 'config.{"Contact": "tcp", "Address": "#{operator.tcp}"}'
+        - command: 'config.{"Contact": "http", "Address": "#{operator.http}"}'
+        - command: 'config.{"Contact": "grpc", "Address": "#{operator.grpc}"}'
