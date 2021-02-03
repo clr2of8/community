@@ -27,5 +27,4 @@ platforms:
   windows:
     psh:
       command: >
-        (Get-ChildItem -Path c:\pstbak\*.* -Filter *.pst | ? {$_.LastWriteTime
-        -gt (Get-Date).AddDays(-1)}).Count
+        (Get-ChildItem -Path $env:USERPROFILE\Desktop,$env:USERPROFILE\Documents -recurse | ? {-not $_.PSIsContainer -and $_.LastWriteTime -gt (Get-Date).AddDays(-1)}).FullName
