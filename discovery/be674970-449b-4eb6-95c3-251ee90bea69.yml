@@ -1,0 +1,18 @@
+id: be674970-449b-4eb6-95c3-251ee90bea69
+name: Dridex Recon Commands
+description: Execute reconnaissance commands seen in use by the Dridex campaign
+tactic: discovery
+technique:
+  id: T1016
+  name: System Network Configuration Discovery
+platforms:
+  windows:
+    cmd:
+      command: 'ipconfig /all & whoami /all & nslookup -type=any #{domainname}'
+metadata:
+  authors:
+    - '@OrOneEqualsOne'
+  tags:
+    - dridex
+  version: 1
+  enabled: true
