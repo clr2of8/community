@@ -12,9 +12,8 @@ technique:
 platforms:
   windows:
     cmd:
-      command: >-
-        REG ADD HKCU\Environment /f /v UserInitMprLogonScript /t REG_MULTI_SZ /d
-        "#{agent.location}"
+      command: |
+        REG ADD HKCU\Environment /f /v UserInitMprLogonScript /t REG_MULTI_SZ /d "#{agent.location}"
 metadata:
   authors:
     - bfuzzy1

@@ -8,9 +8,8 @@ technique:
 platforms:
   darwin:
     sh:
-      command: >-
-        defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist
-        CriticalUpdateInstall -bool NO
+      command: |
+        defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist CriticalUpdateInstall -bool NO
 metadata:
   authors:
     - bfuzzy1

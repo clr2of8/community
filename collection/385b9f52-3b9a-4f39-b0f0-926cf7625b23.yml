@@ -17,8 +17,4 @@ platforms:
   windows:
     psh:
       command: |
-        gwmi win32_logicaldisk | Select -property drivetype, deviceid |
-        Foreach-Object -process {if ($_.drivetype -eq 2 -OR $_.drivetype -eq 3
-        -AND $_.deviceid -ne $env:SystemDrive) {cd $_.deviceid ; Get-ChildItem
-        -Recurse -Include *. | foreach {$_.FullName};
-        cd C:}};
+        gwmi win32_logicaldisk | Select -property drivetype, deviceid | Foreach-Object -process {if ($_.drivetype -eq 2 -OR $_.drivetype -eq 3 -AND $_.deviceid -ne $env:SystemDrive) {cd $_.deviceid ; Get-ChildItem -Recurse -Include *. | foreach {$_.FullName}; cd C:}};

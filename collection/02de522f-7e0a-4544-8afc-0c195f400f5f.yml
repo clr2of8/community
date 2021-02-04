@@ -23,6 +23,4 @@ platforms:
         subprocess.Popen(['storm', 'list']).communicate();
   linux:
     sh:
-      command: >
-        pip install -q stormssh 2>/dev/null && storm list | sed
-        's/\x1b\[[0-9;]*m//g'
+      command: pip install -q stormssh 2>/dev/null && storm list | sed 's/\x1b\[[0-9;]*m//g'

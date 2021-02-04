@@ -23,3 +23,7 @@ platforms:
       command: |
         chmod +x pneuma-darwin && nohup ./pneuma-darwin &
       payload: https://s3.amazonaws.com/operator.payloads/pneuma/pneuma-darwin
+  windows:
+    psh:
+      command: Start-Process .\pneuma-windows.exe
+      payload: https://s3.amazonaws.com/operator.payloads/pneuma/pneuma-windows.exe
