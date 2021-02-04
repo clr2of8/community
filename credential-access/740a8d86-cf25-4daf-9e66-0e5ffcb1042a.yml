@@ -8,17 +8,17 @@ technique:
 platforms:
   linux:
     sh:
-      command: grep -ri password #{directory.T1083}
+      command: 'grep -ri password #{directory.T1083}'
   windows:
     cmd:
       command: findstr /si password *.xml *.ini *.txt *.config 2>nul
     psh:
-      command: |-
+      command: |
         findstr /si pass *.xml *.doc *.txt *.xls;
-        ls -R | select-string -Pattern password
+        ls -R | select-string -Pattern password;
   darwin:
     sh:
-      command: grep -ri password #{directory.T1083}
+      command: 'grep -ri password #{directory.T1083}'
 metadata:
   authors:
     - bfuzzy1

