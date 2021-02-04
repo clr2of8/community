@@ -1,0 +1,20 @@
+id: 37b1f68b-acf2-46a1-9a2e-b376e0149a5e
+metadata:
+  version: 1
+  authors: 
+    - v1dhun
+  tags: []
+name: View pathnames of valid login shells
+description: |
+  The /etc/shells is a Linux / UNIX text file which contains the full pathnames of valid login shells.
+tactic: discovery
+technique:
+  id: T1082
+  name: System Information Discovery
+platforms:
+  darwin:
+    sh:
+      command: cat /etc/shells
+  linux:
+    sh:
+      command: cat /etc/shells
