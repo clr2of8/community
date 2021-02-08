@@ -4,7 +4,9 @@ metadata:
   authors:
     - privateducky
     - MITRE
-  tags: []
+  tags:
+    - APT29 Scenario 1
+    - APT29
 name: Collect ARP details
 description: |
   ARP is a protocol used to map IP addresses to the hardware addresses. This procedure runs a scan to identify which
