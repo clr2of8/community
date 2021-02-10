@@ -1,6 +1,6 @@
 id: be674970-449b-4eb6-95c3-251ee90bea69
-name: Dridex Recon Commands
-description: Execute reconnaissance commands seen in use by the Dridex campaign
+name: General discovery
+description: A small set of reconnaissance commands often run in tandemn
 tactic: discovery
 technique:
   id: T1016
